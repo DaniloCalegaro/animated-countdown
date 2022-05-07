@@ -1,0 +1,30 @@
+body {
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--very-dark-mostly-black-blue)), to(var(--very-dark-blue)));
+  background: linear-gradient(var(--very-dark-mostly-black-blue), var(--very-dark-blue));
+  position: relative;
+}
+
+body .background-sky {
+  position: absolute;
+  top: 0;
+}
+
+body .background-sky img {
+  height: 80vh;
+}
+
+body footer {
+  width: 100vw;
+  height: 15rem;
+  z-index: 1;
+}
+
+body .background-montain {
+  position: absolute;
+  bottom: -.3rem;
+}
+
+body .background-montain img {
+  height: 10rem;
+}
+/*# sourceMappingURL=background.css.map */

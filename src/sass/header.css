@@ -1,0 +1,5 @@
+@import url(./colors.css);
+.header h1 {
+  color: var(--white);
+}
+/*# sourceMappingURL=header.css.map */

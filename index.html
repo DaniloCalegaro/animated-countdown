@@ -1,31 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap" rel="stylesheet">
+    
+    <!--Icons-->
+    <link rel="stylesheet" href="./assets/style.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="./src/sass/rules.css">
+    <link rel="stylesheet" href="./src/sass/background.css">
+    <link rel="stylesheet" href="./src/sass/header.css">
+    <link rel="stylesheet" href="./src/sass/footer.css">
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
+    <title>Frontend Programmer | Animated Countdown</title>
 
-    <title>Frontend Mentor | Launch countdown timer</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
     </style>
   </head>
+
   <body>
-    We're launching soon Days Hours Minutes Seconds
+    <div class="background-sky">
+      <img src="./src/img/bg-stars.svg" alt="sky with stars">
+    </div>
+    <header class="header">
+      <h1>We're launching soon</h1>
+    </header>
+
+    <main class="main">
+      Days Hours Minutes Seconds
+    </main>
+
+    <footer class="footer">
+      <div class="social">
+        <a href="#">
+          <i class="icon-icon-facebook"></i>
+        </a>
+        <a href="#">
+          <i class="icon-icon-instagram"></i>
+        </a>
+        <a href="#">
+          <i class="icon-icon-pinterest"></i>
+        </a>
+      </div>     
+    </footer>
+    
+    <div class="background-montain">
+      <img src="./src/img/pattern-hills.svg" alt="montain hills"></img>
+    </div>
+    
+
   </body>
 </html>
