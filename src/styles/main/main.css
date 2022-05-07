@@ -1,0 +1,26 @@
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.main .section-number {
+  text-align: center;
+}
+
+.main .section-number .sheets {
+  background: var(--dark-desaturated-blue);
+  width: 8.5rem;
+  height: 8rem;
+  border-radius: .5rem;
+}
+
+.main .section-number .label-time {
+  margin-top: 1rem;
+  color: var(--grayish-blue);
+  font-size: .7rem;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+}
+/*# sourceMappingURL=main.css.map */

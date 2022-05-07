@@ -1,0 +1,28 @@
+
+footer {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: 1rem;
+
+  .social {
+    padding: .5rem;
+    display: inline-flex;
+    gap: 2rem;
+
+    a{
+      color: var(--grayish-blue);
+      font-size: 1.5rem;
+      transition: 0.2s;
+    }
+
+    a:hover {
+      transform: translateY(-5px);
+    }
+
+    i:hover {
+      color: var(--soft-red);
+    }
+  }
+}

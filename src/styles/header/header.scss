@@ -1,0 +1,13 @@
+//@import url(../colors/colors.css);
+
+.header {
+  margin-top: auto;
+  margin-bottom: 6rem;
+
+  h1{
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: .4rem;
+    font-size: 1.3rem;
+  }
+}

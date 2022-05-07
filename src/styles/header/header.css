@@ -1,0 +1,12 @@
+.header {
+  margin-top: auto;
+  margin-bottom: 6rem;
+}
+
+.header h1 {
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: .4rem;
+  font-size: 1.3rem;
+}
+/*# sourceMappingURL=header.css.map */
