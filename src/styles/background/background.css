@@ -10,21 +10,39 @@ body .background-sky {
 }
 
 body .background-sky img {
-  height: 80vh;
+  height: 100vh;
+  -webkit-animation: pulse 1.5s infinite alternate;
+          animation: pulse 1.5s infinite alternate;
 }
 
-body footer {
-  width: 100vw;
-  height: 15rem;
-  z-index: 1;
+@-webkit-keyframes pulse {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 body .background-montain {
   position: absolute;
   bottom: -.3rem;
+  width: 100vw;
+  background-repeat: repeat-y;
+  z-index: 0;
 }
 
 body .background-montain img {
-  height: 10rem;
+  width: 100%;
+  max-height: 10rem;
 }
 /*# sourceMappingURL=background.css.map */

@@ -8,27 +8,29 @@ body{
     top: 0;
 
     img {
-      //width: 100vw;
-      height: 80vh;
+      height: 100vh;
+      animation: pulse 1.5s infinite alternate;
     }
   }
 
-  footer {
-    width: 100vw;
-    height: 15rem;
-    
-    z-index: 1;
-    // background-image: url(../img/pattern-hills.svg);
-    // background-position: bottom;
-    // background-repeat: no-repeat;
+  @keyframes pulse {
+    0% {
+      opacity: 0.3;
+    }
+    100% {
+      opacity: 1;
+    }
   }
-
   .background-montain {
     position: absolute;
     bottom: -.3rem;
+    width: 100vw;
+    background-repeat: repeat-y;
+    z-index: 0;
 
     img {
-      height: 10rem;
+      width: 100%;
+      max-height: 10rem;
     }
   }
 }
