@@ -2,6 +2,7 @@
 :root {
   --grayish-blue: hsl(237, 18%, 59%);
   --soft-red: hsl(345, 95%, 68%);
+  --soft-red-dark: hsl(345, 64%, 61%);
   --white: hsl(0, 0%, 100%);
   --dark-desaturated-blue: hsl(236, 21%, 26%);
   --dark-desaturated-blue-dark: hsl(235, 22%, 20%);
