@@ -19,10 +19,10 @@ function startCountDown(duration) {
       clearInterval(countInterval)
     }
 
-    numberDay.textContent = day
-    numberHour.textContent = hour
-    numberMinute.textContent = minute
-    numberSecond.textContent = secund
+    numberDay.textContent = day < 10 ? '0' + day : day
+    numberHour.textContent = hour < 10 ? '0' + hour : hour
+    numberMinute.textContent = minute < 10 ? '0' + minute : minute
+    numberSecond.textContent = secund < 10 ? '0' + secund : secund
   }, 1000)
 }
 
