@@ -10,7 +10,7 @@ body .background-sky {
 }
 
 body .background-sky img {
-  height: 100vh;
+  width: 90vw;
   -webkit-animation: pulse 1.5s infinite alternate;
           animation: pulse 1.5s infinite alternate;
 }
@@ -35,10 +35,12 @@ body .background-sky img {
 
 body .background-montain {
   position: absolute;
-  bottom: -.3rem;
+  bottom: 0;
   width: 100vw;
-  background-repeat: repeat-y;
   z-index: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 body .background-montain img {
