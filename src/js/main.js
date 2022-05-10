@@ -26,4 +26,6 @@ function startCountDown(duration) {
   }, 1000)
 }
 
-startCountDown(172800)
+window.onload = () => {
+  startCountDown(172800)
+}
