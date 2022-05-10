@@ -8,32 +8,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    .block-number {
-      background: var(--dark-desaturated-blue);
-      width: 8.5rem;
-      height: 8.5rem;
-      border-radius: .5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-
-      .number {
-        color: var(--soft-red);
-        font-size: 4.55rem;
-      }
-
-      .sheet-up{
-        position: absolute;
-        width: 100%;
-        height: 50%;
-        top: 0;
-        background: rgba(0, 0, 0, 0.19);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.19);
-        z-index: 1;      
-      }
-    }
 
     .flip-container {
       background: var(--dark-desaturated-blue);
