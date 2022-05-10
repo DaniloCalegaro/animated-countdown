@@ -56,7 +56,7 @@ function startCountDown(duration) {
           ? '0' + time.day.dayCurrent
           : time.day.dayCurrent
 
-      if (time.hour.side === 1) {
+      if (time.day.side === 1) {
         numberDaySide1.textContent = valueCurrent
         flipperDays.classList.toggle('turn')
         time.day.side = 0
