@@ -51,6 +51,78 @@
   z-index: 1;
 }
 
+.main .section-number .flip-container {
+  background: var(--dark-desaturated-blue);
+  width: 8.5rem;
+  height: 8.5rem;
+  border-radius: .5rem;
+  position: relative;
+}
+
+.main .section-number .flip-container .number {
+  color: var(--soft-red);
+  font-size: 4.55rem;
+}
+
+.main .section-number .flip-container .flipper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.main .section-number .flip-container .flipper .front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 1.2rem;
+  text-align: center;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.main .section-number .flip-container .flipper .front .sheet-up {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  top: -1.2rem;
+  background: rgba(0, 0, 0, 0.19);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.19);
+  z-index: 1;
+}
+
+.main .section-number .flip-container .flipper .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -1.3rem;
+  text-align: center;
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.main .section-number .flip-container .flipper .back .sheet-up {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  top: -1.2rem;
+  background: rgba(0, 0, 0, 0.19);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.19);
+  z-index: 1;
+}
+
+.main .section-number .flipper.turn {
+  -webkit-transform: rotateX(-180deg);
+          transform: rotateX(-180deg);
+}
+
 .main .section-number .block-number:before {
   content: "";
   position: absolute;
@@ -64,7 +136,7 @@
   z-index: 2;
 }
 
-.main .section-number .block-number::after {
+.main .section-number .block-number:after {
   content: "";
   position: absolute;
   left: 0;

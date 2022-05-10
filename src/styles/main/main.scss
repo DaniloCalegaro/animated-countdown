@@ -37,6 +37,74 @@
       }
     }
 
+    .flip-container {
+      background: var(--dark-desaturated-blue);
+      width: 8.5rem;
+      height: 8.5rem;
+      border-radius: .5rem;
+      position: relative;
+      //border: solid 1px;
+      
+      .number {
+        color: var(--soft-red);
+        font-size: 4.55rem;
+      }
+
+      
+      .flipper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        
+        .front {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 1.2rem;
+          //left: 1.1rem;
+          text-align: center;
+          backface-visibility: hidden;
+          
+          .sheet-up{
+            position: absolute;
+            width: 100%;
+            height: 50%;
+            top: -1.2rem;
+            background: rgba(0, 0, 0, 0.19);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.19);
+            z-index: 1;      
+          }
+        }
+
+        .back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: -1.3rem;
+          //left: 1.1rem;
+          text-align: center;
+          transform: rotateX(180deg);
+          backface-visibility: hidden;
+
+          .sheet-up{
+            position: absolute;
+            width: 100%;
+            height: 50%;
+            top: -1.2rem;
+            background: rgba(0, 0, 0, 0.19);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.19);
+            z-index: 1;      
+          }
+        }
+      }
+    }
+
+    .flipper.turn {
+      transform: rotateX(-180deg);
+    }
+
     .block-number:before {
       content: "";
       position:absolute;
@@ -49,7 +117,7 @@
       z-index: 2;
     }
 
-    .block-number::after {
+    .block-number:after {
       content: "";
       position:absolute;
       left: 0;
