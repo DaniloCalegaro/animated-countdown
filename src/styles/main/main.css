@@ -100,7 +100,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  top: -1.3rem;
+  top: -1.2rem;
   text-align: center;
   -webkit-transform: rotateX(180deg);
           transform: rotateX(180deg);
@@ -123,10 +123,11 @@
           transform: rotateX(-180deg);
 }
 
-.main .section-number .block-number:before {
+.main .section-number .flip-container:before {
   content: "";
   position: absolute;
   right: 0;
+  top: 50%;
   margin: -.4rem;
   width: .8rem;
   height: .8rem;
@@ -136,10 +137,11 @@
   z-index: 2;
 }
 
-.main .section-number .block-number:after {
+.main .section-number .flip-container:after {
   content: "";
   position: absolute;
   left: 0;
+  top: 50%;
   margin: -.4rem;
   width: .8rem;
   height: .8rem;
