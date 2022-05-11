@@ -55,12 +55,11 @@ function startCountDown(duration) {
 
       if (time.day.side === 1) {
         numberDaySide1.textContent = valueCurrent
-        time.day.side = 0
       } else {
         numberDaySide2.textContent = valueCurrent
-        time.day.side = 1
       }
 
+      time.day.side = toggleSide(time.day.side)
       flipperDays.classList.toggle('turn')
       time.day.dayLast = time.day.dayCurrent
     }
@@ -71,12 +70,11 @@ function startCountDown(duration) {
 
       if (time.hour.side === 1) {
         numberHourSide1.textContent = valueCurrent
-        time.hour.side = 0
       } else {
         numberHourSide2.textContent = valueCurrent
-        time.hour.side = 1
       }
 
+      time.hour.side = toggleSide(time.hour.side)
       flipperHours.classList.toggle('turn')
       time.hour.hourLast = time.hour.hourCurrent
     }
@@ -87,12 +85,11 @@ function startCountDown(duration) {
 
       if (time.minute.side === 1) {
         numberMinuteSide1.textContent = valueCurrent
-        time.minute.side = 0
       } else {
         numberMinuteSide2.textContent = valueCurrent
-        time.minute.side = 1
       }
 
+      time.minute.side = toggleSide(time.minute.side)
       flipperMinutes.classList.toggle('turn')
       time.minute.minuteLast = time.minute.minuteCurrent
     }
@@ -103,12 +100,11 @@ function startCountDown(duration) {
 
       if (time.second.side === 1) {
         numberSecondSide1.textContent = valueCurrent
-        time.second.side = 0
       } else {
         numberSecondSide2.textContent = valueCurrent
-        time.second.side = 1
       }
 
+      time.second.side = toggleSide(time.second.side)
       flipperSeconds.classList.toggle('turn')
       time.second.secondLast = time.second.secondCurrent
       //console.log('passou secundo')
@@ -118,12 +114,8 @@ function startCountDown(duration) {
 }
 
 const toggleSide = lado => {
-  if (lado === 1) {
-    lado = 0
-  } else {
-    lado = 1
-  }
-  return lado
+  const modifiedSide = lado === 1 ? 0 : 1
+  return modifiedSide
 }
 
 const formatTime = time => {
