@@ -51,79 +51,65 @@ function startCountDown(duration) {
 
     /*----Days--- */
     if (time.day.dayCurrent != time.day.dayLast) {
-      const valueCurrent =
-        time.day.dayCurrent < 10
-          ? '0' + time.day.dayCurrent
-          : time.day.dayCurrent
+      const valueCurrent = formatTime(time.day.dayCurrent)
 
       if (time.day.side === 1) {
         numberDaySide1.textContent = valueCurrent
-        flipperDays.classList.toggle('turn')
         time.day.side = 0
       } else {
         numberDaySide2.textContent = valueCurrent
-        flipperDays.classList.toggle('turn')
         time.day.side = 1
       }
 
+      flipperDays.classList.toggle('turn')
       time.day.dayLast = time.day.dayCurrent
     }
 
     /*----Hours--- */
     if (time.hour.hourCurrent != time.hour.hourLast) {
-      const valueCurrent =
-        time.hour.hourCurrent < 10
-          ? '0' + time.hour.hourCurrent
-          : time.hour.hourCurrent
+      const valueCurrent = formatTime(time.hour.hourCurrent)
 
       if (time.hour.side === 1) {
         numberHourSide1.textContent = valueCurrent
-        flipperHours.classList.toggle('turn')
         time.hour.side = 0
       } else {
         numberHourSide2.textContent = valueCurrent
-        flipperHours.classList.toggle('turn')
         time.hour.side = 1
       }
 
+      flipperHours.classList.toggle('turn')
       time.hour.hourLast = time.hour.hourCurrent
     }
 
     /*----Minutes--- */
     if (time.minute.minuteCurrent != time.minute.minuteLast) {
-      const valueCurrent =
-        time.minute.minuteCurrent < 10
-          ? '0' + time.minute.minuteCurrent
-          : time.minute.minuteCurrent
+      const valueCurrent = formatTime(time.minute.minuteCurrent)
 
       if (time.minute.side === 1) {
         numberMinuteSide1.textContent = valueCurrent
-        flipperMinutes.classList.toggle('turn')
         time.minute.side = 0
       } else {
         numberMinuteSide2.textContent = valueCurrent
-        flipperMinutes.classList.toggle('turn')
         time.minute.side = 1
       }
+
+      flipperMinutes.classList.toggle('turn')
       time.minute.minuteLast = time.minute.minuteCurrent
     }
 
     /*----Seconds--- */
     if (time.second.secondCurrent != time.second.secondLast) {
-      const valueCurrent =
-        time.second.secondCurrent < 10
-          ? '0' + time.second.secondCurrent
-          : time.second.secondCurrent
+      const valueCurrent = formatTime(time.second.secondCurrent)
 
       if (time.second.side === 1) {
         numberSecondSide1.textContent = valueCurrent
-        flipperSeconds.classList.toggle('turn')
         time.second.side = 0
       } else {
         numberSecondSide2.textContent = valueCurrent
-        flipperSeconds.classList.toggle('turn')
         time.second.side = 1
       }
+
+      flipperSeconds.classList.toggle('turn')
       time.second.secondLast = time.second.secondCurrent
       //console.log('passou secundo')
     }
@@ -131,7 +117,7 @@ function startCountDown(duration) {
   }, 1000)
 }
 
-let toggleSide = lado => {
+const toggleSide = lado => {
   if (lado === 1) {
     lado = 0
   } else {
@@ -140,6 +126,12 @@ let toggleSide = lado => {
   return lado
 }
 
+const formatTime = time => {
+  const timeFormated = time < 10 ? '0' + time : time
+  return timeFormated
+}
+
+//---- Start with window  -----//
 window.onload = () => {
   startCountDown(172800)
 }
